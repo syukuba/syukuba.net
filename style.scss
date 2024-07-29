@@ -1,0 +1,275 @@
+@import "~bootstrap/scss/functions";
+
+$font-family-sans-serif: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$heading-font-weight: 700;
+
+
+$navbar-light-active-color : white;
+
+$font-size-base: 1.2rem;
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables-dark";
+
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "~bootstrap/scss/utilities/api";
+
+
+
+
+hr {
+  border-color: #f15f40;
+  border-width: 3px;
+  max-width: 80px;
+}
+
+a {
+  color: #f15f40;
+  transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #bd2d0e;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+
+  .navbar-toggler {
+    padding: 4px 6px;
+    font-size: 16px;
+  }
+}
+
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-brand:focus {
+  outline: none;
+}
+
+.navbar-nav .nav-item a.active {
+  transition: background .3s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+
+.navbar .nav li.active a {}
+
+.navbar .nav li.active a:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+  }
+
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .navbar .navbar-brand {
+    font-size: 30px;
+  }
+}
+
+.intro {
+  width: 100%;
+  height: auto;
+}
+
+
+.page-head {
+  display: table;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .page-head {
+    padding: 100px;
+  }
+}
+
+.content-section {
+  padding-top: 30px;
+}
+
+.event-section {
+  width: 100%;
+  color: white;
+  background-color: black;
+  background-size: cover;
+}
+
+.color-section {
+  background-color: #f15f40;
+  background-size: cover;
+}
+
+@media (min-width: 767px) {
+  .content-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .event-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  transition: all .3s ease-in-out;
+  border-radius: 0;
+}
+
+.btn-default {
+  border: 1px solid #f15f40;
+  color: #f15f40;
+  background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid #f15f40;
+  outline: none;
+  color: black;
+  background-color: #f15f40;
+}
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 0;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+img::selection {
+  background: transparent;
+}
+
+.embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.embed iframe {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+
+#to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 150%;
+}
+
+#to-top a {
+  width: 100px;
+  padding: 20px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+  color: #f15f40;
+}
+
+#to-top a:hover {
+  color: #f48770;
+}
+
+.ggmap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
