@@ -24,11 +24,11 @@ jobs:
     - name: Build project
       run: yarn build
 
-    # - name: Deploy to server
-    #   env:
-    #     DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
-    #   run: |
-    #     echo "$DEPLOY_SSH_KEY" > deploy_key.pem
-    #     chmod 600 deploy_key.pem
-    #     rsync -avz -e "ssh -i deploy_key.pem -o StrictHostKeyChecking=no" dist/ syukuba@syukuba.net:~/www/2024-test
-    #     rm deploy_key.pem
+    - name: Deploy to server
+      env:
+        DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+      run: |
+        echo "$DEPLOY_SSH_KEY" > deploy_key.pem
+        chmod 600 deploy_key.pem
+        rsync -avz -e "ssh -i deploy_key.pem -o StrictHostKeyChecking=no" dist/ syukuba@syukuba.net:~/www/2024-test
+        rm deploy_key.pem
