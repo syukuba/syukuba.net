@@ -16,5 +16,5 @@ export default defineConfig({
             }
         }
     },
-    base: '/2024-test'
+    base: '/2024'
 })
