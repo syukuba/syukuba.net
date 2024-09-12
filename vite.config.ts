@@ -15,5 +15,6 @@ export default defineConfig({
                 volunteer: path.resolve(__dirname, 'volunteer.html'),
             }
         }
-    }
+    },
+    base: '/2024-test'
 })
