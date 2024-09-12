@@ -6,5 +6,14 @@ export default defineConfig({
         alias: {
             '~bootstrap' : path.resolve(__dirname, 'node_modules/bootstrap')
         }
+    },
+    build: {
+        rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, 'index.html'),
+                sponsors: path.resolve(__dirname, 'sponsors.html'),
+                volunteer: path.resolve(__dirname, 'volunteer.html'),
+            }
+        }
     }
 })
