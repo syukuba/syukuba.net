@@ -1,370 +1,641 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja_JP">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/x-icon" href="images/favicon_64x64.ico" sizes="64x64">
+    <link rel="icon" type="image/x-icon" href="images/favicon_128x128.ico" sizes="128x128">
+    <link rel="icon" type="image/x-icon" href="images/favicon_256x256.ico" sizes="256x256">
+    <!-- Apple Touch Icon (Optional for iOS devices) -->
+    <link rel="apple-touch-icon" href="images/favicon_256x256.ico">
 
-<head>
+    <meta name="theme-color" content="#ffffff" />
+    <%- include('partials/ga.ejs') %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>保土ケ谷宿場まつり</title>
+    <link rel="stylesheet" href="./assets/scss/tailwind.scss" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0YFPYPPLR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  <body>
+    <%- include('partials/navbar.ejs') %>
 
-    gtag('config', 'G-X0YFPYPPLR');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>保土ケ谷宿場まつり</title>
-</head>
-
-<body>
-  <nav class="navbar fixed-top  navbar-expand-md " role="navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="syukuba_top.html">
-        保土ケ谷宿場まつり
-      </a>
-
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a href="#about" class="nav-link active">アクセス</a>
-          </li>
-          <li class="nav-item">
-            <a href="#character" class="nav-link active">キャラクター</a>
-          </li>
-          <li class="nav-item">
-            <a href="#event" class="nav-link active">イベント情報</a>
-          </li>
-          <li class="nav-item">
-            <a href="#gallery" class="nav-link active">ギャラリー</a>
-          </li>
-          <li class="nav-item">
-            <a href="volunteer.html" class="nav-link active">ボランティア情報</a>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-    <!-- /.container -->
-  </nav>
-
-  <header>
-    <img src="images/top/syukuba_top.webp" class="intro">
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="container content-section text-center ">
-    <div class="row">
-      <h2>2024年度保土ケ谷宿場まつり開催のお知らせ</h2>
-      <hr />
-      <img src="images/poster/2024-syukuba-poster.png" class="img-fluid">
-    </div>
-    <br>
-  </section>
-
-  <section id="access" class="container content-section text-center ">
-    <div class="row">
-      <h2>アクセス</h2>
-      <hr />
-      <p>2024年10月13日(日)～10月14日(祝月)</p>
-      <p>保土ヶ谷駅西口より徒歩５分</p>
-    </div>
-    <div class="row">
-      <div class="ggmap">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1CktGEhCUHRPHyFe_CIAbho2T5-c" width="640"
-          height="640"></iframe>
-      </div>
-    </div>
-    <br>
-  </section>
-
-  <section id="character" class="container content-section text-center">
-    <div class="row">
-      <h2>保土ケ谷宿場まつりキャラクター紹介</h2>
-      <hr />
-      <img src="images/top/syukubakun.jpg" class="img-fluid"></img>
-      <br>
-
-      <img src="images/top/syukubachan.jpg" class="img-fluid"></img>
-      <br>
-    </div>
-  </section>
-
-  <!-- Events Section -->
-  <section id="event" class="container content-section text-center">
-    <div class="row">
-      <h2>イベント情報</h2>
-      <hr />
-      <a href="images/map/map-2024.png" target="blank" data-lightbox="map" data-title="イベント情報">
-        <img src="images/map/map-2024.png" class="img-fluid" />
-      </a>
-
-      <div class="container content-section">
-      今年で第32回を迎える「保土ケ谷宿場まつり」。平成2年から歴史ある宿場町・保土ケ谷を盛り上げるために始まり、地域の方々とともに開催し続けてきました。来場者数も年々増加しており、毎年のように成長を実感しております。
-宿場まつりでは近隣の商店街の店舗による「ござ市」や有志団体による「ステージイベント」など、様々な楽しみ方をすることができます。加えて今年は、「宿場くん音頭」が新登場！ご当地ゆるキャラの「宿場くん」「宿場ちゃん」と宿場まつりをテーマに、実行委員で生み出しました。キャッチ―な歌詞とリズムになっているので、ぜひ楽しんでください。
-みなさんは保土ケ谷に対しどのような気持ちを持っていますか？私たちは、来場者一人一人が心から楽しむことができ、「保土ケ谷に住んでいてよかった」「保土ケ谷が大好きだ」と感じてもらえるお祭りを目指しています。遠い昔、多くの人々で宿場町・保土ケ谷が賑わっていたように、この二日間も多くの来場者の笑顔が見られることを楽しみにしています。
-「保土ケ谷宿場まつり」が開催され続け、約30年。保土ケ谷という宿場町にも多くの変化がありました。社会の様々な変化により、保土ケ谷の街の風景も変わりました。それでもひとつ、変わらないものがあります。それは、私たちが「保土ケ谷を愛する気持ち」です。保土ケ谷に住む人々の地元愛はもちろん、他の地域から移住してきた人々も保土ケ谷を愛し、生活しています。この愛こそが保土ケ谷という街に宿る特別なものだと思います。
-実行委員一同、たくさんの愛が宿る街「保土ケ谷」で、皆さんのご来場をお待ちしております。たくさんの愛を感じながら楽しんでください。
-    </div>
-
-    </div>
-    <br>
-  </section>
-
-<section id="sponser" class="container-fluid content-section text-center">
-    <div class="row">
-        <h2> 協賛 </h2>
-        <hr/>
-        <p> 宿場まつりへのご協力ありがとうございました。 </p>
-    </div>
-    <div class="row">
-        <h3>
-        <a href="sponsors.html">協賛いただいた方々 </a>
-        </h3>
-    </div>
-</section>
-
-  <section class="container content-section text-center">
-    <div class="row">
-        <h2>宿場くん音頭</h2>
-        <hr/>
-    </div>
-    <audio controls>
-      <source src="file/syukuba_kun_ondo_2024.m4a" type="audio/mp4">
-      <source src="file/syukuba_kun_ondo_2024.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <br />
-    ※ プレイボタンで音が流れます
-
-    <div class="mt-4">
-      ダウンロードは<a href="file/syukuba_kun_ondo_2024.m4a" download>こちら</a>
-    </div>
-  </section>
-
-  <section class="container content-section text-center">
-    <div class="row">
-        <h2>宿場祭りのyoutubeチャンネル</h2>
-        <hr/>
-    </div>
-    <a href="https://www.youtube.com/@user-iu4xw7jm3n" target="_blank" class="my-4">
-      <img src="images/youtube.jpg" style="width: 200px; height: auto" /><br/>
-      保土ケ谷宿場まつりチャンネル
-    </a>
-    <br />
-    <div class="mt-4">
-    宿場くん音頭の振り付け動画はこちらから視聴できます！
-    </div>
-  </section>
-
-  <section class="cointainer content-section text-center">
-    <div class="row">
-        <h2>宿場くんのラインスタンプ</h2>
-        <hr/>
-    </div>
-
-    <img
-      srcset="images/line/line.png 1x, images/line/line-2x.png 2x"
-      src="images/line/line.png"
-      style="width: 70px; height: 70px" />
-    <a href="https://line.me/S/sticker/1307627/?lang=ja" target="_blank">
+    <header class="w-full">
       <img
-      src="images/line/syukubakun-sticker.png"
-      style="width: 230px; height: 230px" />
+        src="images/top/syukuba_top.webp"
+        class="object-fill w-full h-full"
+      />
+    </header>
+
+    <section id="about" class="container">
+      <h2 class="section-heading">2024年度保土ケ谷宿場まつり開催のお知らせ</h2>
+      <img
+        src="images/poster/2024-syukuba-poster.png"
+        class="flex-shrink-0 px-3 mt-0 w-full max-w-full h-auto align-middle"
+      />
+
+      <!-- <div class="my-4">
+        <a href="file/宿場32th25.pdf">2024の保土ケ谷宿場祭り新聞 (PDF)</a>
+      </div> -->
+    </section>
+
+    <section id="access" class="container">
+      <div class="flex flex-wrap -mx-3 mt-0 text-center">
+        <h2 class="section-heading">アクセス</h2>
+
+        <p
+          class="flex-shrink-0 px-3 mt-0 mb-4 w-full max-w-full text-neutral-800"
+        >
+          2024年10月13日(日)～10月14日(祝月)
+        </p>
+        <p
+          class="flex-shrink-0 px-3 mt-0 mb-4 w-full max-w-full text-neutral-800"
+        >
+          保土ケ谷駅西口より徒歩５分
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center text-center">
+        <div
+          class="py-4 w-full max-w-full h-0 text-neutral-800"
+          style="padding-bottom: 480px"
+        >
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1CktGEhCUHRPHyFe_CIAbho2T5-c"
+            width="640"
+            height="480"
+            class="pointer-events-none w-full min-h-[480px] px-8"
+          ></iframe>
+        </div>
+      </div>
       <br />
-      宿場くんLINEスタンプ
-    </a>
+    </section>
 
-
-
-  </section>
-
-
-
-  <section id="gallery" class="container content-section text-center">
-    <div class="row">
-      <h2>ギャラリー</h2>
-      <hr />
-      <p> これまでの宿場まつりの様子。
+  <section id="character" class="container">
+    <h2 class="section-heading">保土ケ谷宿場まつりキャラクター紹介</h2>
+    <h3 class="text-2xl text-amber-700 font-bold my-6">宿場くん</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <img
+        src="images/top/syukubakun-profile.jpg"
+        class="justify-self-center object-contain w-auto h-full max-h-[400px]" />
+      <div class="mt-8 sm:mt-4">
+        <dl class="grid gap-4 syukuba-character">
+          <dt>名前</dt><dd>宿場くん</dd>
+          <dt>誕生日</dt><dd>慶長6年 1601年10月第2月曜日</dd>
+          <dt>星座</dt><dd>天秤座</dd>
+          <dt>血液型</dt><dd>手形</dd>
+          <dt>本籍</dt><dd>保土ヶ谷区帷子</dd>
+          <dt>好きな食べ物</dt><dd>宿場そば</dd>
+          <dt>特技</dt><dd>体育</dd>
+          <dt>連れの人</dt><dd>保士ヶ谷宿場小町と剛力彩芽</dd>
+          <dt>配偶者</dt><dd>なし</dd>
+          <dt>仕事</dt><dd>保土ヶ谷宿場まつりおよび保土ヶ谷宿のPR活動</dd>
+        </dl>
+      </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/039.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/038.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/035.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/034.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/033.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/032.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/031.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/030.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/029.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/028.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/027.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/026.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/025.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/024.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/023.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/022.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/021.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/020.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/019.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/018.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/017.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/016.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/015.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/014.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/013.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/012.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/011.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/007.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/005.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/004.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/003.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/002.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/thumb/001.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/001.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/002.jpg" class="img-thumbnail" />
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/003.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/004.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/005.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/006.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/007.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/008.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/009.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/010.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/011.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/012.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/013.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/014.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/015.jpg" class="img-thumbnail" loading="lazy">
-      </div>
-      <div class="col-sm-6 col-md-3 col-lg-2">
-        <img src="images/gallery/2017-thumb/016.jpg" class="img-thumbnail" loading="lazy">
-      </div>
+    <div class="text-left my-4">
+      「宿場くん」は、保土ヶ谷駅前西口商店街を中心に毎年10月に開催される「保土ヶ谷宿場まつり」の
+      公認キャラクター。地元のマスコットとして長年愛されてきたが、まつり25周年記念パワーを受けて、
+      二枚元の世界から等身大のキャラクターとして登場した。右手に持つ松の木は「にんべん」、大きな頭
+      は「口」道中合羽を着た身体は「木」を表し、保土ケ谷宿の「保」の文字を全身で表現している。
+    </div>
+
+    <h3 class="text-2xl text-amber-700 font-bold my-6">宿場ちゃん</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+      <img src="images/top/syukubachan-profile.jpg" class="justify-self-center object-contain w-auto h-full max-h-[450px]"></img>
+      <dl class="grid gap-4 syukuba-character">
+        <dt>名前</dt><dd>宿場ちゃん</dd>
+        <dt>誕生日</dt><dd>10月第2月曜日の前日（年齢非公表）</dd>
+        <dt>星座</dt><dd>天秤座</dd>
+        <dt>血液型</dt><dd>華形</dd>
+        <dt>本籍</dt><dd>保土 谷区帷子町</dd>
+        <dt>好きな食べ物</dt><dd>チョコバナナ</dd>
+        <dt>特技</dt><dd>ダンス</dd>
+        <dt>配偶者</dt><dd>なし</dd>
+        <dt>好きなタイプ</dt><dd>保土ヶ谷を愛してくれる人</dd>
+        <dt>仕事</dt><dd>宿場くんとともに保土ヶ谷宿場まつりおよび保土ヶ谷宿のPR活動</dd>
+      </dl>
+    </div>
+    <div class="text-left my-4">
+      「宿場ちゃん」は、宿場くんのかわいい妹。宿場まつりとまつげの手入れに命を賭ける女の子。子供が
+      大好きで曲がったことが大嫌い。チャームポイントはくるんとしたまつ毛。
+      2017年、兄の宿場くんを手伝うために登場した。宿場くん同様、全身で保土ヶ谷の「保」の字を表現
+      している。
     </div>
   </section>
-  <p id="to-top">
-    <a href="#" class="fa fa-caret-square-o-up" aria-hidden="true"> Top</a>
-  </p>
 
+    <section id="event" class="container">
+      <h2 class="section-heading">イベント情報</h2>
+      <div class="flex justify-center">
+        <a
+          href="images/map/map-2024.png"
+          target="blank"
+          data-lightbox="map"
+          data-title="イベント情報"
+        >
+          <img src="images/map/map-2024.png" class="img-fluid" />
+        </a>
+      </div>
 
+      <div class="container text-left">
+        今年で第32回を迎える<b>「保土ケ谷宿場まつり」</b>。平成2年から歴史ある宿場町・保土ケ谷を盛り上げるために始まり、地域の方々とともに開催し続けてきました。来場者数も年々増加しており、毎年のように成長を実感しております。
+        <br/><br/>
+        宿場まつりでは近隣の商店街の店舗による「ござ市」や有志団体による「ステージイベント」など、様々な楽しみ方をすることができます。
+        <br/><br/>
+        加えて今年は、<b>「宿場くん音頭」</b>が新登場！ご当地ゆるキャラの「宿場くん」「宿場ちゃん」と宿場まつりをテーマに、実行委員で生み出しました。キャッチ―な歌詞とリズムになっているので、ぜひ楽しんでください。
+        <br/><br/>
+        みなさんは保土ケ谷に対しどのような気持ちを持っていますか？ 私たちは、来場者一人一人が心から楽しむことができ、「保土ケ谷に住んでいてよかった」「保土ケ谷が大好きだ」と感じてもらえるお祭りを目指しています。
+        <br/><br/>
+        遠い昔、多くの人々で宿場町・保土ケ谷が賑わっていたように、この二日間も多くの来場者の笑顔が見られることを楽しみにしています。
+        <br/><br/>
+        「保土ケ谷宿場まつり」が開催され続け、約30年。保土ケ谷という宿場町にも多くの変化がありました。社会の様々な変化により、保土ケ谷の街の風景も変わりました。
+        <br/><br/>
+        それでもひとつ、変わらないものがあります。それは、私たちが「保土ケ谷を愛する気持ち」です。保土ケ谷に住む人々の地元愛はもちろん、他の地域から移住してきた人々も保土ケ谷を愛し、生活しています。
+        <br/><br/>
+        この愛こそが保土ケ谷という街に宿る特別なものだと思います。
+        <br/><br/>
+        実行委員一同、たくさんの愛が宿る街「保土ケ谷」で、皆さんのご来場をお待ちしております。たくさんの愛を感じながら楽しんでください。
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p class="text-muted">
-        Copyright &copy; 保土ヶ谷宿場まつり実行委員会 All Rights Reserved.
-      </p>
-    </div>
-  </footer>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v17.0"
-    nonce="kR2IRwUp"></script>
-  <script type="module" src="/main.js"></script>
-</body>
+    <section id="sponsors" class="container">
+      <h2 class="section-heading">協賛</h2>
+      <div class="my-4">
+        (株)パイオラックス・<a href="https://www.gingamura.jp/" target="_blank"
+          >NPO法人ぎんがむら</a
+        >・<a href="https://www.theblacklab.co.jp/" target="_blank"
+          >ザ・ブラックラブカンパニー</a
+        >・矢口電気株式会社・株式会社市野屋商店・帷子珈琲・三ツ沢薬局・小林税務会計事務所・ウキヨバー折目・株式会社タカオインテリアデコレーティング・<a
+          href="https://ayumi-seikotuin1129.com/"
+          target="_blank"
+          >あゆみ整骨院</a
+        >・クオーレ整骨院・<a
+          href="https://beans.jrtk.jp/hodogaya/"
+          target="_blank"
+          >ビーンズ保土ケ谷</a
+        >・<a href="https://www.keigankai.com/" target="_blank"
+          >横浜けいあい眼科 和田町院</a
+        >・コスモス・株式会社ダイイチ・株式会社エクサム・寺井智之税理士事務所・保土ケ谷少年補導員連絡会・月見台東部自治会・月見台南部自治会・帷子１丁目自治会・帷子２丁目自治会・斎藤　義夫・斎藤　寿美江・斎藤　みずほ・九十九澤　ほのか・ほどがやキッズ村村長・ダンスサークルLOOP’S・六庵・山道在明・大久保安洋・宮川保史税理士事務所・山形　和之・山田　律子・フェイスペイント／リリーズ西・<a
+          href="https://garuda2012.com/"
+          target="_blank"
+          >株式会社GARUDA</a
+        >・<a href="https://29bee.owst.jp/" target="_blank"
+          >地元肉酒場２９べゑ</a
+        >・<a href="https://medical-blue-seikotsuin.jp/" target="_blank"
+          >メディカルブルー整骨院</a
+        >・<a href="https://www.seirei.or.jp/Yokohama/" target="_blank"
+          >聖隷横浜病院</a
+        >
+      </div>
 
+      <b>宿場まつりへのご協力ありがとうございました。</b>
+    </section>
+
+    <section class="container">
+      <h2 class="section-heading">宿場くん音頭</h2>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="file/syukuba_kun_ondo_2024.m4a" type="audio/mp4" />
+          <source src="file/syukuba_kun_ondo_2024.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <br />
+      ※ プレイボタンで音が流れます
+
+      <div class="mt-4">
+        ダウンロードは<a href="file/syukuba_kun_ondo_2024.mp3" download>
+          こちら (MP3)
+        </a>
+      </div>
+
+      <div class="mt-4">
+        みんなで予めに覚えておいて、宿場まつりで踊りましょう！<br />
+        <a href="file/syukuba_kun_ondo_lyrics.pdf">宿場くん音頭完成版 (PDF)</a>
+      </div>
+    </section>
+
+    <section class="container" id="sns">
+      <h2 class="section-heading">宿場祭りのSNS</h2>
+      <div class="flex justify-center">
+        <a
+          href="https://www.youtube.com/@hodogaya-syukuba"
+          target="_blank"
+          class="my-4"
+        >
+          <img
+            src="images/youtube.jpg"
+            style="width: 200px; height: auto"
+          /><br />
+          保土ケ谷宿場まつりチャンネル
+        </a>
+      </div>
+      <div class="relative w-full  pb-[56.25%] h-0">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube-nocookie.com/embed/L39kZZDEu1Q?si=Qd2yw4FVgyFsoGZr"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <br />
+      <div class="mt-4">
+        宿場くん音頭の振り付け動画はこちらから視聴できます！
+      </div>
+
+      <hr class="my-8" />
+
+      <div class="flex justify-center">
+        <a
+          href="https://www.youtube.com/@user-iu4xw7jm3n"
+          target="_blank"
+          class="my-4 flex flex-col items-center"
+        >
+          <img
+            src="images/X_logo.svg"
+            style="width: 64px; height: auto"
+          /><br />
+          保土ケ谷宿場まつり公式 X (旧Twitter)
+        </a>
+      </div>
+      <div class="flex justify-center">
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">2024年保土ケ谷宿場まつり。<br>10/13-14にて開催します。<br>ぜひお越しください！<a href="https://t.co/V6cWQIIu4n">https://t.co/V6cWQIIu4n</a><a href="https://t.co/aK0siNUEpK">https://t.co/aK0siNUEpK</a> <a href="https://t.co/OtRa1xk0kL">pic.twitter.com/OtRa1xk0kL</a></p>&mdash; 保土ケ谷宿場まつり (@syukuba_fest) <a href="https://twitter.com/syukuba_fest/status/1838195361665397183?ref_src=twsrc%5Etfw">September 23, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
+      <hr class="my-8"/>
+
+      <div>
+        <a href="https://line.me/S/sticker/1307627/?lang=ja" target="_blank" class="flex items-center justify-center gap-8">
+          <img
+            srcset="images/line/line.png 1x, images/line/line-2x.png 2x"
+            src="images/line/line.png"
+            style="width: 70px; height: 70px"
+          />
+          <img
+            src="images/line/syukubakun-sticker.png"
+            style="width: 230px; height: 230px"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="https://line.me/S/sticker/1307627/?lang=ja" target="_blank">
+          宿場くんLINEスタンプ
+        </a>で宿場祭りを応援しましょう！
+      </div>
+    </section>
+
+    <section id="gallery" class="container">
+      <h2 class="section-heading">ギャラリー</h2>
+      <p>これまでの宿場まつりの様子。</p>
+      <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/039.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/038.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/035.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/034.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/033.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/032.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/031.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/030.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/029.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/028.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/027.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/026.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/025.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/024.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/023.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/022.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/021.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/020.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/019.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/018.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/017.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/016.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/015.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/014.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/013.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/012.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/011.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/007.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/005.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/004.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/003.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/002.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/thumb/001.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/001.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img src="images/gallery/2017-thumb/002.jpg" class="img-thumbnail" />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/003.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/004.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/005.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/006.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/007.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/008.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/009.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/010.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/011.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/012.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/013.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/014.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/015.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <img
+            src="images/gallery/2017-thumb/016.jpg"
+            class="img-thumbnail"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <p id="to-top">
+      <a href="#" class="fa fa-caret-square-o-up" aria-hidden="true">Top</a>
+    </p>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
 </html>
